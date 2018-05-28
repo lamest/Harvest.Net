@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>Harvest.Net.fork</PackageId>
+    <Version>2.0.0</Version>
+    <Authors>Joel Potter, Data Research Group, Paul Irwin, Ivan Sukhikh</Authors>
+    <Title>Harvest.Net</Title>
+    <Description>A wrapper for the Harvest time tracking API.</Description>
+    <PackageTags>harvest;harvestapp;harvestapi;api;harvesthq;timetracking</PackageTags>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageLicenseUrl>https://github.com/ithielnor/harvest.net/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/ithielnor/harvest.net/</PackageProjectUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Refit" Version="4.3.0" />
+  </ItemGroup>
+
+</Project>
