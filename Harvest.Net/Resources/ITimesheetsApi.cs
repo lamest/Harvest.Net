@@ -3,6 +3,9 @@ using System.Threading.Tasks;
 using Harvest.Net.Containers;
 using Harvest.Net.Contracts;
 using Harvest.Net.Models;
+using Harvest.Net.Utils;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using Refit;
 
 namespace Harvest.Net.Resources
@@ -118,8 +121,8 @@ namespace Harvest.Net.Resources
             [AliasAs("task_id")] int taskId,
             [AliasAs("spent_date"), Query(Format = "s")] DateTime spentDate,
             [AliasAs("user_id")] int? userId = null,
-            [AliasAs("started_time")] TimeSpan? startedTime = null,
-            [AliasAs("ended_time")] TimeSpan? endedTime = null,
+            [AliasAs("started_time")] string startedTime = null,
+            [AliasAs("ended_time")] string endedTime = null,
             string notes = null,
             [AliasAs("external_reference")] object externalReference = null
         );

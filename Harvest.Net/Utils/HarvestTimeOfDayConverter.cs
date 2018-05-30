@@ -6,12 +6,13 @@ namespace Harvest.Net.Utils
 {
     public class HarvestTimeOfDayConverter : JsonConverter
     {
+        private CultureInfo _usCulture = CultureInfo.CreateSpecificCulture("en-US");
+
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
             if (value is TimeSpan time)
             {
-                var dateTime = DateTime.MinValue.Add(time);
-                var jsonTimeString = time.ToString("hh:mmtt"); // It will give "03:00 AM"
+                var jsonTimeString = time.ToString("hh:mmtt", _usCulture); // It will give "03:00AM"
                 writer.WriteValue(jsonTimeString);
             }
             else
